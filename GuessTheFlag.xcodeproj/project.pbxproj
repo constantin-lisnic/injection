@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BCAAF7382CE3569A00137271 /* Inject in Frameworks */ = {isa = PBXBuildFile; productRef = BCAAF7372CE3569A00137271 /* Inject */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BC03FF752CDF7E1D001F80D1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCAAF7382CE3569A00137271 /* Inject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = GuessTheFlag;
 			packageProductDependencies = (
+				BCAAF7372CE3569A00137271 /* Inject */,
 			);
 			productName = GuessTheFlag;
 			productReference = BC03FF642CDF7E15001F80D1 /* GuessTheFlag.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = BC03FF5B2CDF7E15001F80D1;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BCAAF7362CE3569A00137271 /* XCLocalSwiftPackageReference "../Inject" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BC03FF652CDF7E15001F80D1 /* Products */;
 			projectDirPath = "";
@@ -408,6 +417,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.lisnic.GuessTheFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -436,6 +449,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.lisnic.GuessTheFlag;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -552,6 +569,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		BCAAF7362CE3569A00137271 /* XCLocalSwiftPackageReference "../Inject" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../Inject;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCAAF7372CE3569A00137271 /* Inject */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Inject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BC03FF5C2CDF7E15001F80D1 /* Project object */;
 }
